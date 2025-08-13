@@ -1,0 +1,4 @@
+
+
+class FeedPage:
+    pass
