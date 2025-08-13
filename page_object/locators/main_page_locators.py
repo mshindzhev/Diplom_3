@@ -22,6 +22,12 @@ class MainPageLocators:
     BUTTON_CREATE_ORDER = (By.XPATH,
                            ".//*[text()='Оформить заказ']")
     IDENTIFIER_ORDER = (By.XPATH,
-                           ".//*[text()='идентификатор заказа']")
+                           ".//*[@class='Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m text text_type_digits-large mb-8']")
+    SECTION_SAUCES = (By.XPATH,
+                           ".//*[@style = 'display: flex;']//*[text()='Соусы']")
+    SECTION_ROLLS = (By.XPATH,
+                      ".//*[@style = 'display: flex;']//*[text()='Булки']")
+    SECTION_TOPPING = (By.XPATH,
+                     ".//*[@style = 'display: flex;']//*[text()='Начинки']")
 
 
