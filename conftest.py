@@ -1,9 +1,8 @@
 import pytest
 import requests
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.firefox.options import Options
 from selenium import webdriver
 import data
+from page_object.pages.login_page import LoginPage
 
 
 @pytest.fixture
@@ -17,13 +16,18 @@ def create_user():
     yield create_user
     requests.delete(f'{data.BASE_API_URL}/auth{data.USER_API_URL}', headers={'Authorization': create_user['accessToken']})
 
-@pytest.fixture(params=['Firefox', 'Chrome'])
+@pytest.fixture
+def login_user(driver):
+    login_user = LoginPage(driver)
+    return login_user.login()
+
+@pytest.fixture(params=['Chrome', 'Firefox'])
 def driver(request):
     data.BROWSER_NAME = request.param
-    if data.BROWSER_NAME == 'Firefox':
-        driver = webdriver.Firefox()
-    else:
+    if data.BROWSER_NAME == 'Chrome':
         driver = webdriver.Chrome()
+    else:
+        driver = webdriver.Firefox()
     yield driver
     driver.quit()
 
