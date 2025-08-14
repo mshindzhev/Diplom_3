@@ -1,4 +1,5 @@
+from page_object.pages.base_page import BasePage
 
 
-class FeedPage:
+class FeedPage(BasePage):
     pass
