@@ -25,9 +25,14 @@ def login_user(driver):
 def driver(request):
     data.BROWSER_NAME = request.param
     if data.BROWSER_NAME == 'Chrome':
-        driver = webdriver.Chrome()
+        options = webdriver.ChromeOptions()
+        options.add_argument('--window-size=1920,1080')
+        driver = webdriver.Chrome(options=options)
     else:
-        driver = webdriver.Firefox()
+        options = webdriver.FirefoxOptions()
+        options.add_argument('--width=1920')
+        options.add_argument('--height=1080')
+        driver = webdriver.Firefox(options=options)
     yield driver
     driver.quit()
 

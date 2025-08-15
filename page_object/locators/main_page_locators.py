@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 
 class MainPageLocators:
     BUTTON_PERSONAL_ACCOUNT = (By.XPATH,
-                               ".//*[@class='AppHeader_header__linkText__3q_va ml-2'][text()='Личный Кабинет']")
+                               ".//*[@class='AppHeader_header__link__3D_hX'][@href='/account']")
     BUTTON_CONSTRUCTOR = (By.XPATH,
                           ".//*[@class='AppHeader_header__linkText__3q_va ml-2'][text()='Конструктор']")
     BUTTON_ORDER_FEED = (By.XPATH,
@@ -29,5 +29,8 @@ class MainPageLocators:
                       ".//*[@style = 'display: flex;']//*[text()='Булки']")
     SECTION_TOPPING = (By.XPATH,
                      ".//*[@style = 'display: flex;']//*[text()='Начинки']")
+
+    HEADER_MAIN_PAGE = (By.XPATH, ".//*[text()='Соберите бургер']")
+
 
 

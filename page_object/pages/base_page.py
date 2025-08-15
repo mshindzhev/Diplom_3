@@ -1,3 +1,4 @@
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 
@@ -27,7 +28,9 @@ class BasePage:
     def click_to_element(self, element):
         self.wait.until(
             expected_conditions.element_to_be_clickable(element))
-        self.driver.find_element(*element).click()
+        element = self.driver.find_element(*element)
+        ActionChains(self.driver).move_to_element(element).perform()
+        ActionChains(self.driver).click(element).perform()
 
     def add_text_to_element(self, element, text):
         self.find_element_with_wait(element).send_keys(text)

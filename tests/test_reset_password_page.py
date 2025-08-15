@@ -1,15 +1,23 @@
 import allure
+import pytest
 
+import data
+from page_object.locators.login_page_locators import LoginPageLocators
 from page_object.pages.recovery_password_page import RecoveryPasswordPage
 
 
 class TestResetPasswordPage:
 
+    @pytest.mark.parametrize('locator',[
+        LoginPageLocators.BUTTON_FORGOT_PASSWORD
+    ])
     @allure.title('Открытие и отображение активного поля ввода для восстановления пароля')
-    def test_password_recovery(self, driver, create_user):
-        with allure.step('Тап "Восстановить пароль"'):
+    def test_password_recovery(self, driver, create_user, locator):
+        with allure.step("Переход на станицу ввода Email для восстановления пароля"):
             recovery_password = RecoveryPasswordPage(driver)
-            recovery_password.go_to_password_recovery_page()
+            recovery_password.go_to_url(f'{data.URL_BASE}{data.URL_LOGIN}')
+            recovery_password.scroll_to_element(locator)
+            recovery_password.click_to_element(locator)
 
         with allure.step('Заполнить Email и перейти на страницу обновления пароля'):
             recovery_password.go_to_password_reset_page()

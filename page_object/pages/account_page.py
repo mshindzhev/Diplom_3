@@ -12,3 +12,8 @@ class AccountPage(BasePage):
         if self.find_element_with_wait(AccountPageLocators.OPENED_HISTORY_ORDERS):
             return True
         return False
+
+    @allure.step("Тап на кнопку выхода из аккаунта")
+    def tap_button_exit(self):
+        self.find_element_with_wait(AccountPageLocators.BUTTON_EXIT)
+        self.click_to_element(AccountPageLocators.BUTTON_EXIT)

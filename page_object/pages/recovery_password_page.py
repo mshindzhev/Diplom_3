@@ -1,18 +1,11 @@
 import allure
 
 import data
-from page_object.locators.login_page_locators import LoginPageLocators
 from page_object.locators.recovery_password_page_locators import RecoveryPasswordPageLocators
 from page_object.pages.base_page import BasePage
 
 
 class RecoveryPasswordPage(BasePage):
-
-    @allure.step("Переход на станицу ввода Email для восстановления пароля")
-    def go_to_password_recovery_page(self):
-        self.go_to_url(f'{data.URL_BASE}{data.URL_LOGIN}')
-        self.scroll_to_element(LoginPageLocators.BUTTON_FORGOT_PASSWORD)
-        self.click_to_element(LoginPageLocators.BUTTON_FORGOT_PASSWORD)
 
     @allure.step("Переход на страницу сброса пароля с введенным email")
     def go_to_password_reset_page(self):

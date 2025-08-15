@@ -2,10 +2,11 @@
 URL_BASE = 'https://stellarburgers.nomoreparties.site'
 URL_FORGOT_PASSWORD = '/forgot-password'
 URL_LOGIN = '/login'
+URL_FEED = '/feed'
 
-EMAIL = 'testakulava@loli.ru'
+EMAIL = 'testakulavl@loli.ru'
 PASSWORD = 'qwerty123'
-NAME = 'МишGaNg1999'
+NAME = 'МишGaNgi1999'
 
 BASE_API_URL = 'https://stellarburgers.nomoreparties.site/api'
 REGISTER_API_URL = '/register'
