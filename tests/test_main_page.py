@@ -4,7 +4,6 @@ import pytest
 import data
 from page_object.locators.feed_page_locators import FeedPageLocators
 from page_object.locators.main_page_locators import MainPageLocators
-from page_object.pages.account_page import AccountPage
 from page_object.pages.main_page import MainPage
 
 
@@ -19,7 +18,21 @@ class TestMainPage:
 
         with allure.step('Проверить переход на раздел'):
             main_page = MainPage(driver)
+            main_page.go_to_url(url)
             main_page.click_to_element(locator)
 
         with allure.step('Проверить открытие раздела'):
             assert main_page.find_element_with_wait(expected_locator)
+
+    @allure.title('Отображение деталей ингредиента')
+    def test_show_details_ingredient(self, driver):
+
+        with allure.step('Проверить открытие деталей ингредиента'):
+            main_page = MainPage(driver)
+            assert main_page.open_details_ingredient() == True
+
+    @allure.title('Закрытие окна с деталями ингредиента по крестику')
+    def test_close_details_ingredient(self, driver):
+        with allure.step('Проверить закрытие деталей ингредиента'):
+            main_page = MainPage(driver)
+            assert main_page.close_details_ingredient() == True

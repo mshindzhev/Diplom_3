@@ -32,5 +32,7 @@ class MainPageLocators:
 
     HEADER_MAIN_PAGE = (By.XPATH, ".//*[text()='Соберите бургер']")
 
+    BUTTON_CLOSE_MODAL_INGREDIENT = (By.XPATH, ".//*[@class='Modal_modal_opened__3ISw4 Modal_modal__P3_V5']//*[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
+
 
 
