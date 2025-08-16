@@ -11,28 +11,34 @@ class MainPageLocators:
                               ".//*[@class='text text_type_main-large mb-5 mt-10'][text()='Соберите бургер']")
     HEADER_DETAILS_INGREDIENT = (By.XPATH,
                                  ".//*[@class='Modal_modal__title_modified__3Hjkd Modal_modal__title__2L34m text text_type_main-large pl-10'][text()='Детали ингредиента']")
-    BUTTON_CLOSE_DETAILS_MODAL = (By.XPATH,
+    BUTTON_CLOSE_MODAL = (By.XPATH,
                                   ".//*[@class='Modal_modal_opened__3ISw4 Modal_modal__P3_V5']//*[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
-    COUNTER_INGREDIENT = (By.XPATH,
-                          ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//*[@class='counter_counter__num__3nue1']")
-    INGREDIENT = (By.XPATH,
+    COUNTER_INGREDIENT_BREAD = (By.XPATH,
+                          ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa6c']//*[@class='counter_counter__num__3nue1']")
+    COUNTER_INGREDIENT_SAUCE = (By.XPATH,
+                                ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//*[@class='counter_counter__num__3nue1']")
+    COUNTER_INGREDIENT_TOPPING = (By.XPATH,
+                                ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa70']//*[@class='counter_counter__num__3nue1']")
+    INGREDIENT_BREAD = (By.XPATH,
+                        ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa6c']")
+    INGREDIENT_SAUCE = (By.XPATH,
                   ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//*[@class='BurgerIngredient_ingredient__image__3e-07 ml-4 mr-4']")
+    INGREDIENT_TOPPING = (By.XPATH,
+                        ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa70']")
     LIST_INGREDIENTS_BURGER_CONSTRUCTOR = (By.XPATH,
                                            ".//*[@class='BurgerConstructor_basket__listContainer__3P_AM']")
     BUTTON_CREATE_ORDER = (By.XPATH,
                            ".//*[text()='Оформить заказ']")
     IDENTIFIER_ORDER = (By.XPATH,
                            ".//*[@class='Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m text text_type_digits-large mb-8']")
-    SECTION_SAUCES = (By.XPATH,
-                           ".//*[@style = 'display: flex;']//*[text()='Соусы']")
-    SECTION_ROLLS = (By.XPATH,
-                      ".//*[@style = 'display: flex;']//*[text()='Булки']")
-    SECTION_TOPPING = (By.XPATH,
-                     ".//*[@style = 'display: flex;']//*[text()='Начинки']")
 
     HEADER_MAIN_PAGE = (By.XPATH, ".//*[text()='Соберите бургер']")
 
     BUTTON_CLOSE_MODAL_INGREDIENT = (By.XPATH, ".//*[@class='Modal_modal_opened__3ISw4 Modal_modal__P3_V5']//*[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
+
+    LOADER_IN_ORDER = (By.XPATH, ".//*[@alt='tick animation']")
+
+
 
 
 

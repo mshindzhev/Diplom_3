@@ -12,7 +12,7 @@ class TestResetPasswordPage:
         LoginPageLocators.BUTTON_FORGOT_PASSWORD
     ])
     @allure.title('Открытие и отображение активного поля ввода для восстановления пароля')
-    def test_password_recovery(self, driver, create_user, locator):
+    def test_password_recovery(self, driver, locator):
         with allure.step("Переход на станицу ввода Email для восстановления пароля"):
             recovery_password = RecoveryPasswordPage(driver)
             recovery_password.go_to_url(f'{data.URL_BASE}{data.URL_LOGIN}')

@@ -9,7 +9,7 @@ from page_object.pages.main_page import MainPage
 class TestAccountPage:
 
     @allure.title('Открытие и отображение раздела «История заказов»')
-    def test_order_history_section(self, driver, create_user, login_user):
+    def test_order_history_section(self, driver, login_user):
 
         with allure.step('Открыть личный кабинет'):
             main_page = MainPage(driver)
@@ -24,7 +24,7 @@ class TestAccountPage:
         LoginPageLocators.BUTTON_ENTER
     ])
     @allure.title('Проверка выхода из аккаунта')
-    def test_order_history_section(self, driver, create_user, login_user, locator):
+    def test_order_history_section(self, driver, login_user, locator):
         with allure.step('Открыть личный кабинет'):
             main_page = MainPage(driver)
             main_page.tap_to_personal_account_section()

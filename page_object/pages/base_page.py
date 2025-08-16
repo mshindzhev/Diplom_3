@@ -1,6 +1,7 @@
 from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
+from seletools.actions import drag_and_drop
 
 
 class BasePage:
@@ -16,6 +17,11 @@ class BasePage:
     def find_element_with_wait(self, element):
         self.wait.until(
             expected_conditions.visibility_of_element_located(element))
+        return self.driver.find_element(*element)
+
+    def find_element_with_wait_on_page(self, element):
+        self.wait.until(
+            expected_conditions.presence_of_element_located(element))
         return self.driver.find_element(*element)
 
     def scroll_to_element(self, element):
@@ -37,3 +43,17 @@ class BasePage:
 
     def get_text_to_element(self, element):
         return self.find_element_with_wait(element).text
+
+    def drag_and_drop_element(self, source_element, target_element):
+        element_source = self.driver.find_element(*source_element)
+        element_target = self.driver.find_element(*target_element)
+        drag_and_drop(self.driver, element_source, element_target)
+
+    def press_esc(self):
+        action = ActionChains(self.driver)
+        action.send_keys(Keys.ESCAPE).perform()
+
+    def not_find_element_on_page(self, element):
+        return self.wait.until(
+            expected_conditions.invisibility_of_element(element))
+

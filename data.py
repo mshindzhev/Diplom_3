@@ -3,6 +3,7 @@ URL_BASE = 'https://stellarburgers.nomoreparties.site'
 URL_FORGOT_PASSWORD = '/forgot-password'
 URL_LOGIN = '/login'
 URL_FEED = '/feed'
+URL_ORDER_HISTORY = '/account/order-history'
 
 EMAIL = 'testakulavl@loli.ru'
 PASSWORD = 'qwerty123'
