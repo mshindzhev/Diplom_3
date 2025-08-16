@@ -1,0 +1,44 @@
+from selenium.webdriver.common.by import By
+
+class MainPageLocators:
+    BUTTON_PERSONAL_ACCOUNT = (By.XPATH,
+                               ".//*[@class='AppHeader_header__link__3D_hX'][@href='/account']")
+    BUTTON_CONSTRUCTOR = (By.XPATH,
+                          ".//*[@class='AppHeader_header__linkText__3q_va ml-2'][text()='Конструктор']")
+    BUTTON_ORDER_FEED = (By.XPATH,
+                         ".//*[@class='AppHeader_header__linkText__3q_va ml-2'][text()='Лента Заказов']")
+    HEADER_ASSEMBLE_BURGER = (By.XPATH,
+                              ".//*[@class='text text_type_main-large mb-5 mt-10'][text()='Соберите бургер']")
+    HEADER_DETAILS_INGREDIENT = (By.XPATH,
+                                 ".//*[@class='Modal_modal__title_modified__3Hjkd Modal_modal__title__2L34m text text_type_main-large pl-10'][text()='Детали ингредиента']")
+    BUTTON_CLOSE_MODAL = (By.XPATH,
+                                  ".//*[@class='Modal_modal_opened__3ISw4 Modal_modal__P3_V5']//*[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
+    COUNTER_INGREDIENT_BREAD = (By.XPATH,
+                          ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa6c']//*[@class='counter_counter__num__3nue1']")
+    COUNTER_INGREDIENT_SAUCE = (By.XPATH,
+                                ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//*[@class='counter_counter__num__3nue1']")
+    COUNTER_INGREDIENT_TOPPING = (By.XPATH,
+                                ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa70']//*[@class='counter_counter__num__3nue1']")
+    INGREDIENT_BREAD = (By.XPATH,
+                        ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa6c']")
+    INGREDIENT_SAUCE = (By.XPATH,
+                  ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa72']//*[@class='BurgerIngredient_ingredient__image__3e-07 ml-4 mr-4']")
+    INGREDIENT_TOPPING = (By.XPATH,
+                        ".//*[@href='/ingredient/61c0c5a71d1f82001bdaaa70']")
+    LIST_INGREDIENTS_BURGER_CONSTRUCTOR = (By.XPATH,
+                                           ".//*[@class='BurgerConstructor_basket__listContainer__3P_AM']")
+    BUTTON_CREATE_ORDER = (By.XPATH,
+                           ".//*[text()='Оформить заказ']")
+    IDENTIFIER_ORDER = (By.XPATH,
+                           ".//*[@class='Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m text text_type_digits-large mb-8']")
+
+    HEADER_MAIN_PAGE = (By.XPATH, ".//*[text()='Соберите бургер']")
+
+    BUTTON_CLOSE_MODAL_INGREDIENT = (By.XPATH, ".//*[@class='Modal_modal_opened__3ISw4 Modal_modal__P3_V5']//*[@class='Modal_modal__close_modified__3V5XS Modal_modal__close__TnseK']")
+
+    LOADER_IN_ORDER = (By.XPATH, ".//*[@alt='tick animation']")
+
+
+
+
+
