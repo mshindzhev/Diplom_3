@@ -9,4 +9,4 @@ class AccountPageLocators:
                              ".//*[@class='Account_button__14Yp3 text text_type_main-medium text_color_inactive'][text()='Выход']")
 
     NUMBER_ORDER = (By.XPATH,
-                             ".//*[@class='text text_type_digits-default'][text()='#0280710']")
+                             ".//*[@class='text text_type_digits-default'][text()='#0280801']")

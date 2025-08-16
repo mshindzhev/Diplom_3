@@ -12,6 +12,6 @@ class FeedPageLocators:
     COUNTER_ORDER_TODAY = (By.XPATH,
                               ".//*[@class='text text_type_main-medium'][text()='Выполнено за сегодня:']/following-sibling::p[1]")
     NUMBER_ORDER = (By.XPATH,
-                    ".//*[@class='text text_type_digits-default'][text()='#0280710']")
+                    ".//*[@class='text text_type_digits-default'][text()='#0280801']")
     ORDER_IN_PROGRESS = (By.XPATH,
                     ".//*[@class='OrderFeed_orderListReady__1YFem OrderFeed_orderList__cBvyi']//*[@class='text text_type_digits-default mb-2']")
